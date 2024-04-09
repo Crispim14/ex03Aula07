@@ -65,12 +65,10 @@ class _PhotoViewerState extends State<PhotoViewer> {
                 onPressed: _nextPhoto,
                 child: Image.network(_imageUrl, width: 300, height: 300,
                     errorBuilder: (context, error, stackTrace) {
-                  // Este callback trata erros ao carregar a imagem
-                  return Text('Error loading image');
+                  return Text('Erro ao carregar img');
                 }),
                 style: ElevatedButton.styleFrom(
-                  padding: EdgeInsets
-                      .zero, // Remove padding to ensure the image fills the button
+                  padding: EdgeInsets.zero,
                 ),
               )
             : CircularProgressIndicator(),
