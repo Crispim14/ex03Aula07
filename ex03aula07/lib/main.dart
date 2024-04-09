@@ -35,7 +35,6 @@ class _PhotoViewerState extends State<PhotoViewer> {
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         setState(() {
-          // Se quiser usar a miniatura, altere para _imageUrl = data['thumbnailUrl'];
           _imageUrl = data['url'];
         });
       } else {
